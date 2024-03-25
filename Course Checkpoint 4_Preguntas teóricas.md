@@ -58,7 +58,9 @@ Entonces, cuando se quiere devolver un valor, por ejemplo cuando se hace un prog
 
 ## 5. Operador de reasignación:
 R.- El operador de reasignación (=) se utiliza para asignar un valor a una variable. Permite cambiar el valor de una variable. Por ejemplo:
+
 x = 10
+
 x = x + 5  # Reasignación: ahora x es 15
 
 Esto es muy útil en el caso de trabajar con tuplas, ya que podemos aprovechar la reasignación y crear una nueva tupla y simplemente sobreescribimos el nombre de la variable y eso es muy importante, puesto que las tuplas son inmutables (no podemos cambiarlas de forma específica), pero lo que podemos hacer es crear dos objetos, agregarlos juntos, asi los estamos concatenando, luego ponerlos dentro de esta variable y simplemente va a sobreescribirlo, por ejemplo así:
