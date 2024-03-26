@@ -35,9 +35,17 @@ resultado = 2 + 3 * 4  # Aquí primero se multiplica y luego se suma
 
 ## 3. Diccionario en Python:
 
-R- Un diccionario es una estructura de datos que almacena pares clave-valor. Las claves deben ser únicas e inmutables (generalmente cadenas o números). Los valores pueden ser de cualquier tipo (números, cadenas, listas, etc.). Por ejemplo:
+R- Un diccionario es una estructura de datos que almacena pares clave-valor. Las claves deben ser únicas e inmutables (generalmente cadenas o números). Los valores pueden ser de cualquier tipo (números, cadenas, listas, etc.). Es similar a buscar palabras en un diccionario, es decir, pasar a través de las páginas del mismo y cada una de ellas tendría algún tipo de representación de una letra y, a partir de ahí, encontrar el valor que quieres. Cuando hablamos de diccionarios en Python es el mismo concepto donde tenemos alguna forma de referenciar esto, así que estamos trabajando con palabras en lugar de claves. 
+
+Por ejemplo:
 
 mi_diccionario = {'nombre': 'Oliver', 'edad': 27}
+
+Para consultar esos valores, al igual que con las listas, basta con pasar el valor de la cadena (la clave) y al ejecutarlo devuelve su valor asociado, por ejemplo asi:
+
+designated_name = mi_diccionario['nombre']
+
+print(designated_name)
 
 ## 4. Diferencia entre el método ordenado y la función de ordenación:
 R.- Ambos se utilizan para ordenar elementos en una lista. En lo referente a sorted(), es una función incorporada que devuelve una nueva lista ordenada sin modificar la original:
