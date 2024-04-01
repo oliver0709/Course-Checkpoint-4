@@ -2,7 +2,6 @@
 
 
 
-
 ## 1. Diferencia entre una lista y una tupla:
 R. En Python, tanto las listas como las tuplas son estructuras de datos utilizadas para almacenar colecciones de elementos. La principal diferencia radica en su mutabilidad y sintaxis. Las listas son mutables, lo que significa que se puede cambiar, agregar o eliminar elementos después de haber creado la lista. Estas se definen usando corchetes [ ]. Por otro lado, las tuplas son inmutables, lo que significa que una vez creada una tupla, no puedes cambiar sus elementos. Estas se definen usando paréntesis ( ). 
 
@@ -84,28 +83,51 @@ Por otro lado, cuando se trabaja con Python en campos como machine learning, muc
 En ese sentido, por lo general se suele preferir las listas cuando se necesita una colección de elementos que se pueda cambiar a lo largo del tiempo, mientras que las tuplas son útiles para datos que no deben modificarse una vez definidos, como coordenadas geográficas o claves de diccionario constantes.
 
 
-
 ## 2. Orden de las operaciones:
 
-R. El orden de las operaciones en Python sigue las reglas estándar de las matemáticas, donde primero se resuelven las operaciones entre paréntesis, luego las de exponentes, seguidas de multiplicaciones y divisiones, y finalmente sumas y restas. Este orden se conoce como PEMDAS (se suele utilizar el acrónimo PEMDAS con mas prepondarancia en Estados Unidos; pero tambien podria sería PEDMAS cuando la división va antes que la multiplicación, lo cual es mas utilizado en Reino Unido y otro paises). Esto último suscita múltiples debates en la comunidad de estudios matemáticos. En definitiva, todas representan el mismo orden de operaciones y las diferencias se deben en gran medida a preferencias regionales. Por tanto, podriamos seguir el siguiente orden:
+R. El orden de las operaciones en Python sigue las reglas estándar de las matemáticas, donde primero se resuelven las operaciones entre paréntesis, luego las de exponentes, seguidas de multiplicaciones y divisiones, y finalmente sumas y restas. Este orden se conoce como PEMDAS, se suele utilizar el acrónimo PEMDAS con mas prepondarancia en Estados Unidos; pero tambien podria sería PEDMAS cuando la división va antes que la multiplicación, lo cual es mas utilizado en Reino Unido y otro paises. Este último acrónimo es similar a BODMAS, cuyas reglas establecen tambien que la división y la multiplicación deben realizarse antes que la suma y la resta en cualquier operación matemática, en inglés sería lo siguiente:
+
+- B – Brackets: Used to Solve expressions within brackets first.
+- O – Orders: Evaluate expressions with exponents or roots next.
+- D – Division: Perform division from left to right.
+- M – Multiplication: Perform multiplication from left to right.
+- A – Addition: Perform addition from left to right.
+- S – Subtraction: Perform subtraction from left to right.
+
+En ese contexto, podemos ver que esto suscita múltiples debates en la comunidad de estudios matemáticos. De forma general, todas representan el mismo orden de operaciones y las diferencias se deben en gran medida a preferencias regionales. Por tanto, podriamos seguir el siguiente orden:
 
 1. Paréntesis
 2. Exponentes
 3. Multiplicación y división (de izquierda a derecha)
 4. Suma y resta (de izquierda a derecha)
 
-Por ejemplo:
+A continuación, un ejemplo de código que sigue las reglas de PEMDAS:
+
 ```python
-resultado = 5 + 4 * 3 - (2 + 1) / 1
-# Primero se resolverán las operaciones dentro del paréntesis
-# 5 + 4 * 3 - 3 / 1
-# Luego las multiplicaciones y divisiones
-# 5 + 12 - 3
-# Finalmente las sumas y restas
-# 14
+resultado = (2 + 3) * 4 ** 2 / 2 - 5
+
+# Desglose según PEMDAS
+# 1. Paréntesis
+#    (2 + 3) se evalúa primero
+#    resultado = (5) * 4 ** 2 / 2 - 5
+
+# 2. Exponentes
+#    4 ** 2 se evalúa después
+#    resultado = 5 * 16 / 2 - 5
+
+# 3. Multiplicación y División (de izquierda a derecha)
+#    5 * 16 se realiza antes de la división porque aparece primero de izquierda a derecha
+#    resultado = 80 / 2 - 5
+#    Luego, 80 / 2
+#    resultado = 40 - 5
+
+# 4. Suma y Resta (de izquierda a derecha)
+#    Finalmente, 40 - 5
+   
+print(resultado)  # Debería imprimir 35
 ```
 
-Es importante recordar el orden de las operaciones para escribir código que produzca resultados esperados.
+Esto nos demuestra cómo Python aplica las reglas de PEMDAS para producir el resultado esperado de la expresión. Es crucial entender y aplicar correctamente estas reglas cuando se escriben expresiones matemáticas complejas en Python para asegurar que se obtengan los resultados deseados.
 
 
 ## 3. Diccionario en Python:
