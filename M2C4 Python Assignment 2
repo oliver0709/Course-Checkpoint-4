@@ -1,17 +1,21 @@
 #Exercise 1: Create a list, tuple, float, integer, decimal, and dictionary.
+import math
+import decimal
+
 list_var = ["manzana", "banana", "kiwi"]
 tuple_var = ("manzana", "banana", "kiwi")
-float_var = 3.14
+float_var = 3.14159
 integer_var = 27
-decimal_var = 3.14
+decimal_var = decimal.Decimal('3.14')
 dictionary_var = {"nombre": "Oliver", "edad": 27, "ciudad": "Donostia"}
 
 #Exercise 2: Round your float up.
-rounded_float = round(float_var)
+
+rounded_float = math.ceil(float_var)
 print(rounded_float)
 
 #Exercise 3: Get the square root of your float.
-import math
+
 square_root = math.sqrt(float_var)
 print(square_root)
 
@@ -28,13 +32,13 @@ list_var.append("naranja")
 print(list_var)
 
 #Exercise 7: Replace the first element in your list.
-list_var[0] = "pera"  
+list_var[0] = "pera"
 print(list_var)
 
 #Exercise 8: Sort your list alphabetically.
-list_var.sort()  
+list_var.sort()
 print(list_var)
 
 #Exercise 9: Use reassignment to add an element to your tuple.
-tuple_var = tuple_var + ("piña",)  
+tuple_var += ("naranja", )
 print(tuple_var)
